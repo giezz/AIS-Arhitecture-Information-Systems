@@ -25,7 +25,6 @@ public class SkeletonController {
     @FXML
     private Button btnPage3;
 
-
     @FXML
     private StackPane stackPane;
 
@@ -59,7 +58,9 @@ public class SkeletonController {
             stackPane.getChildren().setAll(fxml);
         }
         else if (event.getSource() == btnPage3) {
-            System.out.println(((Button) event.getSource()).getId());
+            Parent fxml = FXMLLoader.load(Objects.requireNonNull(App.class.getResource("page-3.fxml")));
+            stackPane.getChildren().removeAll();
+            stackPane.getChildren().setAll(fxml);
         }
     }
 }

@@ -13,7 +13,7 @@
                <children>
                   <StackPane fx:id="stackPane" layoutX="307.0" layoutY="106.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label text="PAGE 2" />
+                        <Label text="PAGE 3" />
                      </children></StackPane>
                </children>
             </AnchorPane>

@@ -28,10 +28,10 @@ public class LoginFormController {
     @FXML
     private void handleAuthButtonClick(ActionEvent event) throws IOException {
         System.out.println(btnAuth.getId());
-        if (tfLogin.getText() != null && pfPassword.getText() != null) {
-            if (tfLogin.getText().equals("admin") && pfPassword.getText().equals("admin")) {
+//        if (tfLogin.getText() != null && pfPassword.getText() != null) {
+//            if (tfLogin.getText().equals("admin") && pfPassword.getText().equals("admin")) {
                 App.changeScene(event, "skeleton.fxml", "Добро пожаловать", true);
-            }
-        }
+//            }
+//        }
     }
 }
