@@ -37,27 +37,27 @@ public class SkeletonController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @FXML
     void handleNavButton(ActionEvent event) throws IOException {
-        if (event.getSource() == btnPageHome) {
+        Button source = ((Button) event.getSource());
+        if (btnPageHome.equals(source)) {
             Parent fxml = FXMLLoader.load(Objects.requireNonNull(App.class.getResource("home-page.fxml")));
             stackPane.getChildren().removeAll();
             stackPane.getChildren().setAll(fxml);
         }
-        else if (event.getSource() == btnPage1) {
+        else if (btnPage1.equals(source)) {
             Parent fxml = FXMLLoader.load(Objects.requireNonNull(App.class.getResource("page-1.fxml")));
             stackPane.getChildren().removeAll();
             stackPane.getChildren().setAll(fxml);
         }
-        else if (event.getSource() == btnPage2) {
+        else if (btnPage2.equals(source)) {
             Parent fxml = FXMLLoader.load(Objects.requireNonNull(App.class.getResource("page-2.fxml")));
             stackPane.getChildren().removeAll();
             stackPane.getChildren().setAll(fxml);
         }
-        else if (event.getSource() == btnPage3) {
+        else if (btnPage3.equals(source)) {
             Parent fxml = FXMLLoader.load(Objects.requireNonNull(App.class.getResource("page-3.fxml")));
             stackPane.getChildren().removeAll();
             stackPane.getChildren().setAll(fxml);

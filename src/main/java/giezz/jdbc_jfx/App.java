@@ -33,6 +33,32 @@ public class App extends Application {
         stage.show();
     }
 
+//    public static void openScene (Window owner, Modality modality, String fxmlFile, String title, boolean isResizable) throws IOException {
+//        Stage stage = loadStage(fxmlFile);
+//        stage.setTitle(title);
+//        stage.initModality(modality);
+//        stage.initOwner(owner);
+//        stage.centerOnScreen();
+//        stage.setResizable(isResizable);
+//        stage.show();
+//    }
+
+//    private static Stage loadStage(String fxmlFile) throws IOException {
+//        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxmlFile));
+//        Scene scene = new Scene(fxmlLoader.load());
+//        Stage stage = new Stage();
+//        stage.setScene(scene);
+//        return stage;
+//    }
+
+//    public static void openScene(String fxmlFile, String title, boolean isResizable) throws IOException {
+//        Stage stage = loadStage(fxmlFile);
+//        stage.setTitle(title);
+//        stage.centerOnScreen();
+//        stage.setResizable(isResizable);
+//        stage.show();
+//    }
+
     public static void main(String[] args) {
         launch();
     }

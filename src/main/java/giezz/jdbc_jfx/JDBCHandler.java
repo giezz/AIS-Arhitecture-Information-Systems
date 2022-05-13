@@ -54,7 +54,7 @@ public class JDBCHandler {
     }
 
     public ObservableList<Employee> getEmployees() {
-        String selectSQL = "SELECT id_employee, inn, date_of_birth, first_name, middle_name, last_name, phone, email, driver_license_category from employees";
+        String selectSQL = "SELECT id_employee, inn, date_of_birth, first_name, middle_name, last_name, phone, email, driver_license_category from employees ORDER BY id_employee";
         return handleQuery(selectSQL);
     }
 
@@ -104,15 +104,22 @@ public class JDBCHandler {
         }
     }
 
-    public void deleteEmployee(int EmployeeID) {
+    public void deleteEmployee(int employeeID) {
         String deleteSQL = "DELETE FROM employees WHERE id_employee = ?";
 
         try (PreparedStatement preparedStatement = this.connection.prepareStatement(deleteSQL)){
-            preparedStatement.setInt(1, EmployeeID);
+            preparedStatement.setInt(1, employeeID);
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
+    public void updateEmployee(String sql) {
+        try (Statement statement = this.connection.createStatement()) {
+            statement.executeUpdate(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
