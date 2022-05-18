@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 
 import java.sql.SQLException;
 
@@ -40,6 +42,16 @@ public class EmployeeRoleController {
         colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
 
         showEEP();
+    }
+
+    @FXML
+    void handleMouseClick(MouseEvent mouseEvent) {
+        if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+            if (mouseEvent.getClickCount() == 2) {
+                System.out.println("double click");
+                showEEP();
+            }
+        }
     }
 
     void showEEP() {
